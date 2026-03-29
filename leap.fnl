@@ -1,0 +1,3 @@
+(fn leap-year? [y]
+  (let [div? #(= 0 (% $1 $2))]
+    (and (div? y 4) (or (not (div? y 100)) (div? y 400)))))

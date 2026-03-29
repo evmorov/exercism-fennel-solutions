@@ -1,0 +1,11 @@
+(fn [n]
+  (local div? #(= 0 (% $1 $2)))
+  (local empty? #(= 0 (length $1)))
+  (local drops [])
+  (local add-drop #(table.insert drops $1))
+  (when (div? n 3) (add-drop "Pling"))
+  (when (div? n 5) (add-drop "Plang"))
+  (when (div? n 7) (add-drop "Plong"))
+  (if (empty? drops)
+      (tostring n)
+      (table.concat drops)))
