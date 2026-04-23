@@ -14,7 +14,7 @@
         (do
           (var base locase-start)
           (if (is-upcase code) (set base upcase-start))
-          (local code-no-base (% code base))
+          (local code-no-base (- code base))
           (local new-code-no-base (% (+ code-no-base num) alphabet-length))
           (set result-code (+ base new-code-no-base))))
     (set result (.. result (utf8.char result-code))))
