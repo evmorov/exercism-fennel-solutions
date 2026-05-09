@@ -20,4 +20,4 @@
     (set result (.. result (utf8.char result-code))))
   result)
 
-{:rotate rotate}
+{: rotate}
